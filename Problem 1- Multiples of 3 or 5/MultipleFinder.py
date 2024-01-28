@@ -7,19 +7,19 @@ import math
 def sumMultiples(max: int, factorList: list) -> int :
     print("beginning sumMultiples for args", max, factorList)
     if len(factorList) > 2:
-        print("Please limit size of factorList to 2") 
+        print("Not including support for a factorList of size >2 due to O(n!) runtime. Please limit size of factorList to 2") 
         return -1
     factorArr = np.asarray(factorList)
-    print("created factorArr ", factorArr)
+    #print("created factorArr ", factorArr)
     maxMultipleArr = np.floor((max-1)/factorArr)
-    print("created maxMultipleArr ", maxMultipleArr)
+    #print("created maxMultipleArr ", maxMultipleArr)
     sumTermArr = factorArr * (((maxMultipleArr)**2) + (maxMultipleArr))/2
-    print("created sumTermArr ", sumTermArr)
+    #print("created sumTermArr ", sumTermArr)
     
     excludeFactor = factorList[0]*factorList[1]
-    print("created excludeFactor: ", excludeFactor)
+    #print("created excludeFactor: ", excludeFactor)
     excludeMaxMultiple = math.floor((max-1)/excludeFactor)
     excludeTerm = excludeFactor * ((excludeMaxMultiple**2) + (excludeMaxMultiple))/2
-    print("final excludeTerm ", excludeTerm)
+    #print("final excludeTerm ", excludeTerm)
 
     return sumTermArr.sum() - excludeTerm
