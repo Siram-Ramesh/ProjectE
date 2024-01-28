@@ -1,7 +1,7 @@
 import MultipleFinder as mf
 import unittest
 
-class TestStringMethods(unittest.TestCase):
+class MultipleFinderTest(unittest.TestCase):
 
     def test_35_boundIs0(self):
         self.assertEqual(mf.sumMultiples(0, [3,5]), 0)
