@@ -14,12 +14,10 @@ def sumEvenFibonacci(maximum: int) -> int:
         return 2
     sum = 2
     fibList = [1, 2]
-    n = 2
     fn = fibList[0] + fibList[1]
     while fn < maximum:
         if fn %2 == 0:
             sum += fn
         fibList.append(fn)
-        fn = fibList[n] + fibList[n-1]
-        n +=1
+        fn = fibList[-1] + fibList[-2]
     return sum
