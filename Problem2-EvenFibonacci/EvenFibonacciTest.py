@@ -1,7 +1,7 @@
 import EvenFibonacci as ef
 import unittest
 
-class MultipleFinderTest(unittest.TestCase):
+class EvenFibonacciTest(unittest.TestCase):
 
     def test_0(self):
         self.assertEqual(ef.sumEvenFibonacci(0), 0)
